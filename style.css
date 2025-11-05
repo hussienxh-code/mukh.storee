@@ -1,0 +1,76 @@
+/* style.css - simple responsive RTL page with techy white/blue/black palette */
+:root{
+  --bg:#0b0b0c;
+  --card:#0f1720;
+  --accent:#27b4ff;
+  --muted:#cbd5e1;
+  --white:#ffffff;
+  --glass: rgba(255,255,255,0.04);
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: "Segoe UI", Tahoma, system-ui, "Helvetica Neue", Arial;
+  background: linear-gradient(180deg,#060606 0%, #0b1115 100%);
+  color:var(--white);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:32px;
+  -webkit-font-smoothing:antialiased;
+}
+.card{
+  width:100%;
+  max-width:420px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.02));
+  border-radius:18px;
+  padding:20px;
+  box-shadow: 0 10px 30px rgba(2,6,23,0.7);
+  text-align:center;
+  border: 1px solid rgba(255,255,255,0.04);
+}
+.brand{padding:6px 0 12px}
+.logo{
+  width:120px;
+  height:120px;
+  object-fit:contain;
+  border-radius:12px;
+  background:linear-gradient(180deg,#ffffff05,#00000005);
+  padding:8px;
+  margin:0 auto 8px;
+  display:block;
+}
+h1{margin:0;font-size:20px;letter-spacing:1px}
+.subtitle{margin:4px 0 0;color:var(--muted);font-size:13px}
+
+.links{display:flex;flex-direction:column;gap:12px;margin-top:16px;padding:6px 4px}
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:14px 16px;
+  border-radius:12px;
+  text-decoration:none;
+  color:var(--card);
+  font-weight:700;
+  background:var(--white);
+  box-shadow: 0 6px 18px rgba(2,6,23,0.5);
+  transition:transform .12s ease, box-shadow .12s ease;
+}
+.btn:hover{transform:translateY(-3px)}
+.btn .hint{font-size:12px;opacity:0.7;margin-inline-start:8px;color:#0b1620}
+
+/* specific colors */
+.btn-instagram{background: linear-gradient(90deg,#ffffff,#eaf8ff); color:#0b1620}
+.btn-facebook{background: linear-gradient(90deg,#eaf6ff,#e1f3ff); color:#0b1620}
+.btn-whatsapp{background: linear-gradient(90deg,#e6fcf8,#d9fbf4); color:#0b1620}
+
+.info{margin-top:18px;color:var(--muted);font-size:13px;padding:8px 4px}
+
+/* mobile tweaks */
+@media (max-width:420px){
+  .card{padding:18px;border-radius:14px}
+  .logo{width:100px;height:100px}
+  .btn{padding:12px 14px}
+}
